@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual pais voce é?</title>
+</head>
+<body>
+    <h2> Sua nacionalidade </h2>
+
+    Qual o seu país ? <input type="text" name="pais" id="pais">
+
+    <input type="button" value="Pesquisar" onclick="clicar()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+
+        function clicar(){
+
+            var paisp =  window.document.querySelector('input#pais')
+
+            var res = window.document.querySelector('div#res')
+
+
+
+            var vel = String(paisp.value).toLowerCase()
+
+            res.innerText = `Seu pais é ${vel}` 
+
+        if(vel == 'brasil'){
+
+            res.innerHTML = 'Você é Brasileiro'
+
+        }else(
+
+            res.innerHTML = 'Você é estrangeiro'
+
+        )
+
+
+        }
+
+    </script>
+</body>
+</html>
